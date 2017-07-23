@@ -179,7 +179,7 @@ DMZ_INTERNAL void regrid_group(IplImage *sobel_image, GroupedRects &group) {
 #define MAX_GRID_SPACING 15
   int best_grid_spacing = 0;
   int best_starting_col_offset = 0;
-  float best_ratio = MAXFLOAT;
+  float best_ratio = FLT_MAX;
   
   int bounds_left = MAX(group.left - 2 * kSmallCharacterWidth, 0);
   int bounds_right = MIN(group.left + group.width + 2 * kSmallCharacterWidth, kCreditCardTargetWidth);
